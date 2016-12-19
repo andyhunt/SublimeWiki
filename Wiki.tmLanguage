@@ -8,6 +8,8 @@
 		<string>sublime-wiki</string>
 		<string>swiki</string>
 	</array>
+	<key>firstLineMatch</key>
+		<string>^[A-Z][a-z]+[A-Z][a-z][A-Za-z0-9_-]*\s*</string>
 	<key>name</key>
 	<string>Wiki</string>
 	<key>patterns</key>
@@ -22,7 +24,7 @@
 			<key>comment</key>
 			<string>Match WikiWords and make them into links.</string>
 			<key>match</key>
-			<string>([A-Z][a-z]+){2,}</string>
+			<string>([A-Z][a-z]+){2,}[0-9]*</string>
 			<key>name</key>
 			<string>string.markup.underline.link.internal.Wiki</string>
 		</dict>		
@@ -30,10 +32,11 @@
 			<key>comment</key>
 			<string>Simplest possible web address matcher. If you think this is basic, you should see the one in the Markdown syntax file.</string>
 			<key>match</key>
-			<string>((?:https?|ftp)://\S+)</string>
+			<string>((?:https?|ftp|file)://\S+)</string>
 			<key>name</key>
-			<string>markup.underline.link.external.Wiki</string>
+			<string>string.markup.underline.link.external.Wiki</string>
 		</dict>
+		<!--
 		<dict>
 			<key>begin</key>
 			<string>"</string>
@@ -44,6 +47,7 @@
 			<key>name</key>
 			<string>string.quoted.double.Wiki</string>
 		</dict>
+	-->
 		<dict>
 			<key>begin</key>
 			<string>`</string>
