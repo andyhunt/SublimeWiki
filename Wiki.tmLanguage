@@ -15,8 +15,12 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>match</key>
+<!-- 			<key>match</key>
 			<string>^\s*(\w+.+:\s*$\n?)</string>
+			<key>name</key>
+			<string>keyword.control.header.Wiki</string> -->
+			<key>match</key>
+			<string>^\s*([A-Za-z0-9\s/-\[\]\(\)]+:[^/])</string>
 			<key>name</key>
 			<string>keyword.control.header.Wiki</string>
 		</dict>
